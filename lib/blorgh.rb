@@ -12,7 +12,8 @@ module Blorgh
 
     def initialize
       @importmap = Importmap::Map.new
-      @importmap.draw(Blorgh::Engine.root.join("config/importmap.rb"))
+      @importmap.draw(Blorgh::Engine.root
+                          .join("config/importmap.rb"))
     end
   end
 
