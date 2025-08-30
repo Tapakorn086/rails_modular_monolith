@@ -2,8 +2,8 @@ module Blorgh
   class Engine < ::Rails::Engine
     isolate_namespace Blorgh
 
-    initialize "blorgh.assets" do |app|
-      app.config.assets.path << root.join("app/javascript")
+    initializer "blorgh.assets" do |app|
+      app.config.assets.paths << root.join("app/javascript")
     end
   end
 end
